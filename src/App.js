@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar,Cards,Chart,CountryPicker} from './Components';
+import {Navbar,Cards,Chart,CountryPicker, Footer} from './Components';
 import './App.css';
 import {GetData} from './Api/GetData';
 import {Container} from '@material-ui/core';
@@ -22,10 +22,11 @@ render(){
       <React.Fragment>
       <Navbar/>
       <Container>
-        <Cards data={data}/>
         <CountryPicker changeCountryHandler={this.changeCountryHandler}/>
+        <Cards data={data}/>
         <Chart data={data} country={country}/>  
       </Container>
+      <Footer/>
       </React.Fragment>
     )}
 } 

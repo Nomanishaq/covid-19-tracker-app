@@ -1,0 +1,58 @@
+.container {
+    padding-left: 120px;
+  }
+  .card {
+    margin: 0 1% !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  .Child{
+    margin-top: 50px;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .h1{
+    text-align: center;
+    font-weight: 50;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .p{
+    text-align: center;
+    font-weight: 50;
+  }
+  .pConfrimed{
+    text-align: center;
+    font-weight: 50;
+    color: rgba(0, 0, 255, 0.5);
+  }
+
+  .pRecoverd{
+    text-align: center;
+    font-weight: 50;
+    color: green;
+  }
+  .pDeath{
+    text-align: center;
+    font-weight: 50;
+    color: red;
+  }
+
+  .infected {
+    border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+  }
+  
+  .recovered{
+    border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+  }
+  
+  .deaths{
+    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+  }
+  
+  @media only screen and (max-width: 770px) {
+    .card {
+      margin: 2% 0 !important;
+    }
+  }

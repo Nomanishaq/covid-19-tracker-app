@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getDailyData } from '../../Api/GetData';
 import { Line, Bar } from 'react-chartjs-2';
+import style from './Chart.style.css'
 
 const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
     let [dailyData, setDailyData] = useState({});
@@ -30,12 +31,6 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
                         borderColor: 'red',
                         backgroundColor: 'rgba(255,0 ,0, 0.5)',
                         fill: true,
-                    },
-                    {
-                        data: dailyData.map((data) => data.recovered),
-                        label: 'recovered',
-                        borderColor: 'green',
-                        fill: true
                     }
                     ],
                 }} />) : null
@@ -56,14 +51,17 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
                 }}
                 options={{
                     legend: { display: false },
-                    title: { display: true, text: `Current state in ${country ? country: 'Global'}` },
+                    title: { display: true, text: `Current state Result is ${country ? country: 'Global'}` },
                 }}
             /> : null
     )
     return (
-        <div>
-            {!country ? lineChart: null}
-            {barChart}
+        <div className={style.container}>
+           <div className={style.lineChart}>
+              {!country ?<h1 className={style.h1}>Line Chart</h1>: null } 
+               {!country ? lineChart : null}</div>
+           <h1 className={style.h1}>Bar Chart</h1>
+          <div className={style.barChart}>{barChart}</div>
         </div>
     );
 }

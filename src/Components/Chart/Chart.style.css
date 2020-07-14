@@ -1,0 +1,23 @@
+.container {
+    /* display: flex; */
+    justify-content: center;
+    width: 90%;
+  }
+  
+  .lineChart{
+      margin-left: 50px;
+  }
+  .barChart{
+      margin-top: 50px;
+      padding: 10px;
+  }
+  .h1{
+    text-align: center;
+    font-weight: 50;
+  }
+  @media only screen and (max-width: 770px) {
+    .container {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }

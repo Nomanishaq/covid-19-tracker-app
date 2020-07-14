@@ -1,11 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CountUp from 'react-countup';
-import style from './Cards.module.css';
+import style from './Cards.style.css';
 import {Container,Paper} from '@material-ui/core';
 
 export default function Cards({data: {confirmed, recovered, deaths, lastUpdate}}) {    
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,22 +26,33 @@ const classes = useStyles();
    return (
  
  <Container className={style.container}>
-   <h1 className={style.h1}>Covid-19 Tracker</h1>
+
    <div className={classes.root}>
-      <Paper className={style.paper} elevation={5} >
-        <h1>confirmed</h1>
-        <CountUp start={0} end={confirmed.value} duration={5.0}></CountUp>
+     <Paper className={style.paper} elevation={5} >
+        <h1 className={style.h1}>Confirmed</h1>
+        <p className={style.pConfrimed} ><CountUp start={0} end={confirmed.value} duration={3.0}></CountUp></p> 
+        <p className={style.Child}>Number of confirmed COVID-19 cases</p>
         </Paper>
       <Paper className={style.paper} elevation={5} >
-      <h1>recovered</h1>
-        <CountUp start={0} end={recovered.value} duration={5.0}></CountUp>
+      <h1 className={style.h1}>Recovered</h1>
+      <p className={style.pRecoverd} ><CountUp start={0} end={recovered.value} duration={3.0}></CountUp></p> 
+      <p className={style.Child}>Number of Recovered COVID-19 cases</p>
+
       </Paper>
        <Paper className={style.paper} elevation={5} >
-      <h1>deaths</h1>
-          <CountUp start={0} end={deaths.value} duration={5.0}></CountUp>
-          </Paper>
+      <h1 className={style.h1}>Deaths</h1>
+         <p className={style.pDeath} ><CountUp start={0} end={deaths.value} duration={3.0}></CountUp></p> 
+        <p className={style.Child}>Number of Deaths COVID-19 cases</p>
+
+      </Paper>
+      <Paper className={style.paper} elevation={5}>
+        <h1 className={style.h1}>Last Update</h1>
+        <p className={style.p}>{new Date(lastUpdate).toDateString()}</p>
+        <p className={style.Child}>Updated</p>
+
+      </Paper>
      </div>
-       <p>{new Date(lastUpdate).toDateString()}</p>
+  
      </Container>
  
     )
