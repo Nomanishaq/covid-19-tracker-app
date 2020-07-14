@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   inherit:{
-    background: '#e0e0e0f2',
-    color: 'black'
+    background: '#3f51b5',
+    color: '#fff'
   }
 }));
 

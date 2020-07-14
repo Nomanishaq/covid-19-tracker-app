@@ -10,6 +10,7 @@
   .barChart{
       margin-top: 50px;
       padding: 10px;
+       margin-left: 130px;
   }
   .h1{
     text-align: center;
@@ -18,6 +19,11 @@
   @media only screen and (max-width: 770px) {
     .container {
       width: 100%;
+    }
+    .lineChart{
+    margin-left: 0px;
+    }
+    .barChart{
       margin-left: 0px;
     }
   }

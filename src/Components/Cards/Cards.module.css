@@ -20,22 +20,22 @@
   }
   .p{
     text-align: center;
-    font-weight: 50;
+    font-weight: 400;
   }
   .pConfrimed{
     text-align: center;
-    font-weight: 50;
+    font-weight: 400;
     color: rgba(0, 0, 255, 0.5);
   }
 
   .pRecoverd{
     text-align: center;
-    font-weight: 50;
+    font-weight: 400;
     color: green;
   }
   .pDeath{
     text-align: center;
-    font-weight: 50;
+    font-weight: 400;
     color: red;
   }
 
