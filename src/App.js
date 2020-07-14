@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Suspense} from 'react';
 import {Navbar,Cards,Chart,CountryPicker, Footer} from './Components';
 import './App.css';
 import {GetData} from './Api/GetData';
@@ -23,8 +23,10 @@ render(){
       <Navbar/>
       <Container>
         <CountryPicker changeCountryHandler={this.changeCountryHandler}/>
+        <Suspense fallback={<h1>Loading.....</h1>}>
         <Cards data={data}/>
-        <Chart data={data} country={country}/>  
+        </Suspense> 
+        <Chart data={data} country={country}/> 
       </Container>
       <Footer/>
       </React.Fragment>

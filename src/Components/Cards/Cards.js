@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 const classes = useStyles();
 
     if(!confirmed){
-        return 'loading';
+        return 'Loading...';
     }
 
    return (
